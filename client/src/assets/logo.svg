@@ -1,0 +1,9 @@
+<svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Icon -->
+  <rect x="5" y="5" width="30" height="30" rx="6" fill="#3B82F6"/>
+  <path d="M20 12L24 18H16L20 12Z" fill="white"/>
+  <circle cx="20" cy="25" r="3" fill="white"/>
+  
+  <!-- Text -->
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1F2937">ImagAI</text>
+</svg>

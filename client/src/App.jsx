@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import { AppContext } from './context/AppContext';
 
+import Upcoming from './pages/Upcoming';
+
 const App = () => {
   const { showLogin } = useContext(AppContext);
 
@@ -27,6 +29,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/result' element={<Result />} />
         <Route path='/buy' element={<BuyCredit />} />
+        <Route path='/upcoming' element={<Upcoming />} />
       </Routes>
       <Footer />
     </div>

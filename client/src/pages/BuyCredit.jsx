@@ -4,9 +4,11 @@ import { AppContext } from '../context/AppContext';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const BuyCredit = () => {
     const { user, backendUrl, loadCreditsData, token, setShowLogin } = useContext(AppContext);
+    const navigate = useNavigate();
 
     const initPay = async (order) => {
         const options = {
@@ -88,7 +90,7 @@ const BuyCredit = () => {
                         <p className='mt-3 mb-1 font-semibold'>{item.id}</p>
                         <p className='text-sm'>{item.desc}</p>
                         <p className='mt-6'><span className='text-3xl font-medium'>${item.price}</span> / {item.credits} credits</p>
-                        <button onClick={() => paymentRazorpay(item.id)} className='w-full bg-gray-800 dark:bg-gray-600 text-white mt-8 text-sm rounded-md py-2.5 min-w-52 hover:bg-gray-900 dark:hover:bg-gray-500 transition-colors'>Get Started</button>
+                        <button onClick={() => navigate('/upcoming')} className='w-full bg-gray-800 dark:bg-gray-600 text-white mt-8 text-sm rounded-md py-2.5 min-w-52 hover:bg-gray-900 dark:hover:bg-gray-500 transition-colors'>Get Started</button>
                     </div>
                 ))}
             </div>
